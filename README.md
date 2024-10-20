@@ -43,7 +43,7 @@ I created this project because I was running out of Google storage space. Most o
    
    - **Switching from `messages.delete` to `messages.trash`**: Initially, I used `messages.delete`, but this caused issues because I was getting a `HttpError 403`. I thought the problem was the scopes but it didn't fix it. Switching to `messages.trash` fixed the problem by sending the emails to the Trash folder, where they are automatically deleted after 30 days anyway.
    
-   - **Pagination**: The Gmail API returns up to 100 emails per request, which was limiting the script to only processing 100 emails at a time. I implemented pagination to fetch and delete all emails beyond the first 100 in each run, allowing the script to handle thousands of emails across multiple accounts. After U made this fix and ran it, it took <> hours!
+   - **Pagination**: The Gmail API returns up to 100 emails per request, which was limiting the script to only processing 100 emails at a time. I implemented pagination to fetch and delete all emails beyond the first 100 in each run, allowing the script to handle thousands of emails across multiple accounts. After I made this fix and ran it, it took 6 hours to run haha.
 
    - **Multiple Accounts**: I added support for both of my Gmail accounts, allowing the script to clean up emails from more than one account by storing separate credentials and tokens for each.
 
